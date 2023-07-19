@@ -1,1 +1,1 @@
-current_os: "{{ (override_os_family is defined) | ternary(override_os_family,ansible_os_family) | lower }}"
+current_os: ubuntu
