@@ -10,10 +10,6 @@
       dest: ./test
       single_branch: yes
       version: main
-  
-  - name: Check is arch
-    ansible.builtin.debug:
-      var: ansible_facts
        
   - name: Cleanup
     ansible.builtin.shell:

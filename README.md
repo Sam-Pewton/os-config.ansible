@@ -9,5 +9,9 @@ changes, or are running it in a VM.
 First iteration: Download and run the playbook locally
 
 Requires Ansible to be installed in the OS that is being provisioned and the repo to be cloned.
-Ubuntu
+
+### Ubuntu
+```
 sudo apt-get install git ansible
+git clone https://github.com/Sam-Pewton/os-config.ansible
+```

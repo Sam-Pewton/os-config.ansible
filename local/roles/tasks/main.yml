@@ -1,0 +1,15 @@
+- name: Update and upgrade apt
+  ansible.builtin.apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    upgrade: yes
+
+- name: Set up repositories directory
+  ansible.builtin.shell:
+    cmd: mkdir ~/repositories
+     
+- name: Clone dotfiles repository
+  ansible.builtin.git:
+    repo: https://github.com/Sam-Pewton/os-config.dotfiles
+    dest: ~/repositories/dotfiles
+    version: main
