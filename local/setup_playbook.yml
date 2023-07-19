@@ -1,0 +1,21 @@
+- name: First playbook
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+
+  tasks:
+  - name: Clone repo
+    ansible.builtin.git:
+      repo: https://github.com/Sam-Pewton/strict-package-management.python
+      dest: ./test
+      single_branch: yes
+      version: main
+  
+  - name: Check is arch
+    ansible.builtin.debug:
+      var: ansible_facts
+       
+  - name: Cleanup
+    ansible.builtin.shell:
+      cmd: rm -rf test
+    when: ansible_facts['distribution']=="Archlinux"
