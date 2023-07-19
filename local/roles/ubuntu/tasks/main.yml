@@ -5,6 +5,10 @@
   become: true
   become_method: sudo
 
+- name: Add apt repositories
+  ansible.builtin.apt_repository:
+    repo: ppa:aslatter/ppa
+
 - name: Install apt package requirements
   ansible.builtin.apt:
     pkg:
