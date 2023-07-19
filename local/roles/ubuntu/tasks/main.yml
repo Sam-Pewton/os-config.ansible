@@ -1,15 +1,21 @@
 - name: Update and upgrade apt
   ansible.builtin.apt:
     update_cache: yes
-    cache_valid_time: 3600
     upgrade: yes
+  become: true
+  become_method: sudo
 
-- name: Set up repositories directory
+- name: Install apt package requirements
+  ansible.builtin.apt:
+    pkg:
+      - alacritty
+
+- name: Set up directories
   ansible.builtin.shell:
-    cmd: mkdir ~/repositories
+    cmd: mkdir ~/repositories && mkdir ~/repositories/os-config
      
-- name: Clone dotfiles repository
+- name: Clone .dotfiles repository
   ansible.builtin.git:
     repo: https://github.com/Sam-Pewton/os-config.dotfiles
-    dest: ~/repositories/dotfiles
+    dest: ~/repositories/os-config/os-config.dotfiles
     version: main
