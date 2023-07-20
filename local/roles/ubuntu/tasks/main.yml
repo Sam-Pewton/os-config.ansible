@@ -8,18 +8,51 @@
 - name: Add apt repositories
   ansible.builtin.apt_repository:
     repo: ppa:aslatter/ppa
+  become: true
+  become_method: sudo
 
 - name: Install apt package requirements
   ansible.builtin.apt:
     pkg:
       - alacritty
+      - i3-wm
+      - libreoffice
+      - nitrogen
+      - tmux
+      - vim
+  become: true
+  become_method: sudo
+
+- name: Install snap package requirements 
+  ansible.builtin.shell:
+    cmd: echo "TODO"
+
+- name: Install other package requirements 
+  ansible.builtin.shell:
+    cmd: echo "TODO"
 
 - name: Set up directories
   ansible.builtin.shell:
-    cmd: mkdir ~/repositories && mkdir ~/repositories/os-config
+    cmd: mkdir -p ~/repositories && mkdir -p ~/repositories/os-config
      
 - name: Clone .dotfiles repository
   ansible.builtin.git:
     repo: https://github.com/Sam-Pewton/os-config.dotfiles
     dest: ~/repositories/os-config/os-config.dotfiles
     version: main
+
+- name: Create OS specific branch to be used by the OS
+  ansible.builtin.shell:
+    cmd: echo "TODO"
+
+- name: Create dotfile links
+  ansible.builtin.shell:
+    cmd: echo "TODO"
+
+- name: Setup change detection job
+  ansible.builtin.shell:
+    cmd: echo "TODO"
+
+- name: Setup auto pull on boot job
+  ansible.builtin.shell:
+    cmd: echo "TODO"
