@@ -2,7 +2,7 @@
 - name: Update and upgrade apt
   apt:
     update_cache: yes
-    upgrade: yes
+    upgrade: "yes"
   become: true
   become_method: sudo
 

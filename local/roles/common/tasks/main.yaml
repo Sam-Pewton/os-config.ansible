@@ -1,10 +1,11 @@
 ---
-- name: Set up directories
-  ansible.builtin.shell:
-    cmd: mkdir -p {{ item }}
+- name: Make directories
+  file:
+    path: "{{ item }}"
+    state: directory
   loop: "{{ create_directories }}"
      
-- name: Clone .dotfiles repository
+- name: Clone personal public repositories
   ansible.builtin.git:
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
