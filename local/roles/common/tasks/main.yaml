@@ -8,7 +8,7 @@
   ansible.builtin.git:
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
-    version: "{{ item.main }}"
+    version: "{{ item.version }}"
   loop: "{{ personal_repositories_public }}"
 
 - name: Install other package requirements 
