@@ -1,1 +1,5 @@
 ---
+snap_packages:
+  - brave
+  - spotify
+  - discord
