@@ -8,15 +8,15 @@
 
 - name: Add apt repositories
   apt_repository:
-    repo: {{ item }}
-  loop: apt_repositories
+    repo: "{{ item }}"
+  loop: "{{ apt_repositories }}"
   become: true
   become_method: sudo
 
 - name: Install apt package requirements
   apt:
     pkg:
-      - {{ item }}
-  loop: apt_packages
+      - "{{ item }}"
+  loop: "{{ apt_packages }}"
   become: true
   become_method: sudo

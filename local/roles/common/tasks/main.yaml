@@ -2,14 +2,14 @@
 - name: Set up directories
   ansible.builtin.shell:
     cmd: mkdir -p {{ item }}
-  loop: {{ create_directories }}
+  loop: "{{ create_directories }}"
      
 - name: Clone .dotfiles repository
   ansible.builtin.git:
-    repo: {{ item.repo }}
-    dest: {{ item.dest }}
-    version: {{ item.main }}
-  loop: {{ personal_repositories_public }}
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    version: "{{ item.main }}"
+  loop: "{{ personal_repositories_public }}"
 
 - name: Install other package requirements 
   ansible.builtin.shell:
