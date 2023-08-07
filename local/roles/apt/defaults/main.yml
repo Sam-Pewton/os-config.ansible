@@ -6,11 +6,11 @@ apt_packages:
   - nitrogen
   - tmux
   - vim
-  - terraform
-  - kubectl
   - gnupg # for terraform
   - software-properties-common # for terraform
   - awscli
+    # - terraform
+    # - kubectl
 
 apt_repositories:
   - ppa:aslatter/ppa # for alacritty
