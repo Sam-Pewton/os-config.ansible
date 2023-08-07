@@ -1,0 +1,11 @@
+---
+apt_packages:
+  - alacritty
+  - i3-wm
+  - libreoffice
+  - nitrogen
+  - tmux
+  - vim
+
+snap_packages:
+  - brave

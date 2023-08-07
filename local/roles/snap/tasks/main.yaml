@@ -1,0 +1,4 @@
+---
+- name: Install snap package requirements 
+  ansible.builtin.shell:
+    cmd: echo "TODO"
