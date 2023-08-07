@@ -1,6 +1,0 @@
-- hosts: localhost
-  connection: local
-  gather_facts: yes
-  roles:
-    # Roles are the same as the OS name and will be parsed in as a parameter eventually
-    - role: ubuntu

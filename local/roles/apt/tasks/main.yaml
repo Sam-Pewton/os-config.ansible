@@ -1,0 +1,19 @@
+---
+- name: Update and upgrade apt
+  ansible.builtin.apt:
+    update_cache: yes
+    upgrade: yes
+  become: true
+  become_method: sudo
+
+- name: Add apt repositories
+  ansible.builtin.apt_repository:
+    repo: ppa:aslatter/ppa
+  become: true
+  become_method: sudo
+
+- name: Install apt package requirements
+  ansible.builtin.apt:
+    pkg:
+  become: true
+  become_method: sudo
