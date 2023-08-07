@@ -2,5 +2,5 @@
 - name: Install snap package requirements 
   community.general.snap:
     name:
-      - {{ item }}
-  loop: {{ snap_packages }}
+      - "{{ item }}"
+  loop: "{{ snap_packages }}"
