@@ -1,1 +1,8 @@
 ---
+personal_repositories_public:
+  - { repo: https://github.com/Sam-Pewton/os-config.dotfiles, dest: ~/repositories/os-config/os-config.dotfiles, version: main }
+
+create_directories:
+  - ~/repositories 
+  - ~/repositories/os-config
+  - ~/repositories/strict-package-management

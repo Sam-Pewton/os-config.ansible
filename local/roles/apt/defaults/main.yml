@@ -6,6 +6,14 @@ apt_packages:
   - nitrogen
   - tmux
   - vim
+  - terraform
+  - kubectl
+  - gnupg # for terraform
+  - software-properties-common # for terraform
+  - awscli
 
-snap_packages:
-  - brave
+apt_repositories:
+  - ppa:aslatter/ppa # for alacritty
+
+uninstall_packages:
+  - firefox

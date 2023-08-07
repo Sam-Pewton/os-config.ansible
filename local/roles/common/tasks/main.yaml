@@ -1,13 +1,15 @@
 ---
 - name: Set up directories
   ansible.builtin.shell:
-    cmd: mkdir -p ~/repositories && mkdir -p ~/repositories/os-config
+    cmd: mkdir -p {{ item }}
+  loop: {{ create_directories }}
      
 - name: Clone .dotfiles repository
   ansible.builtin.git:
-    repo: https://github.com/Sam-Pewton/os-config.dotfiles
-    dest: ~/repositories/os-config/os-config.dotfiles
-    version: main
+    repo: {{ item.repo }}
+    dest: {{ item.dest }}
+    version: {{ item.main }}
+  loop: {{ personal_repositories_public }}
 
 - name: Install other package requirements 
   ansible.builtin.shell:
