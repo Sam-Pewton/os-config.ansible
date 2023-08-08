@@ -1,1 +1,23 @@
 ---
+- name: Clone personal public repositories
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    version: "{{ item.version }}"
+  loop: "{{ repo_url }}"
+
+- name: Make the yay package
+  command: cd ~/yay && makepkg -si
+
+- name: Remove the yay directory
+  file:
+    path: ~/yay
+    state: absent
+
+# - name: Install yay packages
+#   yay:
+#     name: {{ item.name }}
+#     state: {{ item.state }}
+#   loop: {{ yay_packages }}
+#   become: true
+#   become_method: sudo

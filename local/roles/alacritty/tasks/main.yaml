@@ -1,5 +1,5 @@
 ---
-- name: Symlink neovim configuration
+- name: Symlink alacritty configuration
   file:
     src: "{{ config_location }}"
     dest: "{{ symlink_dest }}"
