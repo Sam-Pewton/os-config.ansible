@@ -1,3 +1,3 @@
 ---
-config_location: ~/repositories/os-config/os-config.dotfiles/old/alactritty
+config_location: ~/repositories/os-config/os-config.dotfiles/old/alacritty
 symlink_dest: ~/.config/alacritty
