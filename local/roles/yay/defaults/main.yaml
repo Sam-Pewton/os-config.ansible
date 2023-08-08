@@ -1,1 +1,6 @@
 ---
+repo: 
+  - { url: https://aur.archlinux.org/yay-git.git, dest: ~/yay, version: main }
+
+# yay_packages:
+#  - { name: something, state: latest }

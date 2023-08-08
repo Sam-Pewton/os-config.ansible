@@ -5,3 +5,4 @@
     - apt
     - snap
     - common
+    - nvim

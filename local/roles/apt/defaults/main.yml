@@ -9,11 +9,13 @@ apt_packages:
   - gnupg # for terraform
   - software-properties-common # for terraform
   - awscli
+  - neovim
     # - terraform
     # - kubectl
 
 apt_repositories:
   - ppa:aslatter/ppa # for alacritty
+  - ppa:neovim-ppa/stable # for neovim
 
 uninstall_packages:
   - firefox
