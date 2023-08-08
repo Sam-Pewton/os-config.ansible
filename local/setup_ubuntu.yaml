@@ -5,4 +5,5 @@
     - apt
     - snap
     - common
+    - alacritty
     - nvim
