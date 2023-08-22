@@ -7,5 +7,5 @@
     - common
     - alacritty
     - nvim
-    - iosevka
+    - iosevka_font
     - rustup

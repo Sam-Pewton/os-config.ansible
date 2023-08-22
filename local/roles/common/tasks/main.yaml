@@ -31,3 +31,4 @@
 - name: Setup auto pull on boot job
   shell:
     cmd: echo "TODO"
+...

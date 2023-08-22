@@ -3,3 +3,4 @@ pacman_packages:
   - base-devel
   - git
   - neovim
+...

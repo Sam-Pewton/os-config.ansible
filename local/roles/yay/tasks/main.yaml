@@ -21,3 +21,4 @@
 #   loop: {{ yay_packages }}
 #   become: true
 #   become_method: sudo
+...

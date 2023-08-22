@@ -19,3 +19,4 @@ apt_repositories:
 
 uninstall_packages:
   - firefox
+...

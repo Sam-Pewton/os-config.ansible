@@ -4,3 +4,4 @@ repo:
 
 # yay_packages:
 #  - { name: something, state: latest }
+...
