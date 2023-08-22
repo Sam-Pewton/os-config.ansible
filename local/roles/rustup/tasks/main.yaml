@@ -2,6 +2,7 @@
 - name: Check if cargo is installed
   shell: cargo --version
   register: cargo_version
+  ignore_errors: yes
 
 - name: Download the rustup installer
   get_url:
@@ -9,9 +10,9 @@
     dest: ~/Downloads/sh.rustup.rs
     mode: '0755'
     force: 'yes'
-  when: cargo_version is search("'cargo' not found") 
+  when: cargo_version.failed 
 
 - name: Run the rustup installer
   shell: ~/Downloads/sh.rustup.rs -y
-  when: cargo_version is search("'cargo' not found") 
+  when: cargo_version.failed 
 ...
