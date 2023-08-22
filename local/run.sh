@@ -5,3 +5,4 @@
 #
 # For now, just ubuntu
 ansible-playbook setup_ubuntu.yaml --ask-become-pass
+# ansible-playbook setup_arch.yaml --ask-become-pass
