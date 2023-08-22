@@ -1,6 +1,6 @@
 ---
 - name: Get the latest release number
-  shell: curl --silent "https://api.github.com/repos/$1/releases/latest" | 
+  shell: curl --silent "https://api.github.com/repos/{{ project_name }}/releases/latest" | 
          grep '"tag_name":' |                                            
          sed -E 's/.*"([^"]+)".*/\1/' |
          sed 's/v//'

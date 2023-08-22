@@ -2,4 +2,4 @@
   connection: local
   gather_facts: yes
   roles:
-    - pacman
+    - rustup
