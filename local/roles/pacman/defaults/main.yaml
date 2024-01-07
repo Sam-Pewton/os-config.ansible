@@ -1,9 +1,12 @@
 ---
 pacman_packages:
   - alacritty
-  - xorg-server
-  - i3-wm
-  - nitrogen
+  - gnome
+  - gnome-tweaks
+    # - xorg-server
+    # - xorg-xinit
+    # - i3-wm
+    # - nitrogen
   - tmux
   - base-devel
   - neovim

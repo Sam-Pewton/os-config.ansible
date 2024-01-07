@@ -9,7 +9,7 @@
 - name: Install pacman packages
   pacman:
     name: "{{ item }}"
-    state: 
+    state: latest
   loop: "{{ pacman_packages }}"
   become: true
   become_method: sudo
