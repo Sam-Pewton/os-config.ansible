@@ -1,8 +1,11 @@
 ---
-repo: 
-  - { url: https://aur.archlinux.org/yay-git.git, dest: ~/yay, version: main }
+source: 
+  { url: https://aur.archlinux.org/yay.git, dest: ~/yay, version: main }
 
-yay_packages:
+packages:
   - { name: brave, state: latest }
+  - { name: gitmux, state: latest }
+  - { name: scangearmp2, state: latest }
   - { name: spotify, state: latest }
+  - { name: xboxdrv, state: latest }
 ...
