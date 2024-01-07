@@ -7,7 +7,7 @@ pacman_packages:
   - gnome
   - gnome-tweaks
   - i3-wm
-  - i3-status
+  - i3status
   - nitrogen
   - libreoffice
   - neovim
@@ -15,7 +15,7 @@ pacman_packages:
   - nvidia-utils
   - obs-studio
   - obsidian
-  - steam
+    # - steam
   - tmux
     # - xorg-server
     # - xorg-xinit
