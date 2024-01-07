@@ -1,6 +1,11 @@
 ---
 pacman_packages:
+  - alacritty
+  - xorg-server
+  - i3-wm
+  - nitrogen
+  - tmux
   - base-devel
-  - git
   - neovim
+  - libreoffice
 ...

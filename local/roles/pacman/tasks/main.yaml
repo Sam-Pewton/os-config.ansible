@@ -1,2 +1,16 @@
 ---
+- name: Update all base pacman packages
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  become: true
+  become_method: sudo
+
+- name: Install pacman packages
+  pacman:
+    name: "{{ item }}"
+    state: 
+  loop: "{{ pacman_packages }}"
+  become: true
+  become_method: sudo
 ...
