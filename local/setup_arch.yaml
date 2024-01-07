@@ -2,4 +2,7 @@
   connection: local
   gather_facts: yes
   roles:
-    - rustup
+    # - common
+    - pacman
+    - yay
+    # - iosevka_font

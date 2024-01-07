@@ -1,6 +1,27 @@
 ---
 pacman_packages:
+  - alacritty
+  - arandr
   - base-devel
-  - git
+  - conky
+  - cups
+  - discord
+  - docker
+  - docker-buildx
+  - docker-compose
+  - gnome
+  - gnome-tweaks
+  - i3-wm
+  - i3status
+  - nitrogen
+  - libreoffice
   - neovim
+  - nvidia
+  - nvidia-utils
+  - obs-studio
+  - obsidian
+  - steam
+  - tmux
+    # - xorg-server
+    # - xorg-xinit
 ...
