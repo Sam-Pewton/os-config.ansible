@@ -1,14 +1,22 @@
 ---
 pacman_packages:
   - alacritty
+  - base-devel
+  - conky
+  - discord
   - gnome
   - gnome-tweaks
+  - i3-wm
+  - i3-status
+  - nitrogen
+  - libreoffice
+  - neovim
+  - nvidia
+  - nvidia-utils
+  - obs-studio
+  - obsidian
+  - steam
+  - tmux
     # - xorg-server
     # - xorg-xinit
-    # - i3-wm
-    # - nitrogen
-  - tmux
-  - base-devel
-  - neovim
-  - libreoffice
 ...

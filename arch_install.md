@@ -28,3 +28,6 @@ systemctl start dhcpcd.service
 
 **For wireless**
 TBC
+
+## Locales (for ansible to work)
+LC_ALL=C.UTF-8

@@ -13,4 +13,9 @@
   loop: "{{ pacman_packages }}"
   become: true
   become_method: sudo
+
+- name: Start GNOME service (effective on reboot)
+  service:
+    name: gdm
+    enabled: yes
 ...

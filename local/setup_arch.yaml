@@ -3,4 +3,4 @@
   gather_facts: yes
   roles:
     - pacman
-    - rustup
+    - yay
