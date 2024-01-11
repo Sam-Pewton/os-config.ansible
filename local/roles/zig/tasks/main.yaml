@@ -1,0 +1,40 @@
+---
+- name: Get ziglang version manifest
+  uri:
+    url: "{{ base_url }}"
+    method: GET
+    return_content: true
+  register: zig_versions_output
+
+- name: Extract master version
+  set_fact:
+    master_version: "{{ zig_versions_output.json.master }}"
+
+- name: Get user home path
+  shell: "echo $HOME"
+  register: user_home
+
+- name: Download master version
+  get_url: 
+    url: "{{ master_version['x86_64-linux']['tarball'] }}"
+    dest: "{{ user_home.stdout }}/{{ home_dest }}"
+    checksum: "sha256:{{ master_version['x86_64-linux']['shasum'] }}"
+
+- name: Untar the tarball
+  unarchive:
+    src: "{{ user_home.stdout }}/{{ home_dest }}/{{ master_version['x86_64-linux']['tarball'] | split('/') | last }}"
+    dest: "{{ user_home.stdout }}/{{ home_dest }}"
+
+- name: Create symlink from zig binary to /usr/bin
+  file:
+    src: "{{ user_home.stdout }}/{{ home_dest }}/zig-linux-x86_64-{{ master_version.version }}/zig"
+    dest: "/usr/bin/zig"
+    state: link
+  become: true
+  become_method: sudo
+
+- name: Delete tarball
+  file:
+    path: "{{ user_home.stdout }}/{{ home_dest }}/{{ master_version['x86_64-linux']['tarball'] | split('/') | last }}"
+    state: absent
+...

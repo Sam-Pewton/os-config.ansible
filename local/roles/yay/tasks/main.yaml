@@ -15,10 +15,8 @@
     state: absent
 
 - name: Install yay packages
-  shell: "yay -S {{ item.name }}"
+  shell: "yay -S {{ item.name }} --noconfirm"
   loop: "{{ packages }}"
-  become: true
-  become_method: sudo
 
 - name: Enable xboxdrv.service
   service:

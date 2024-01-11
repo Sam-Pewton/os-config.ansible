@@ -1,3 +1,4 @@
 ---
 - name: Symlink dotfile
   shell: echo TODO
+...
