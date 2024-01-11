@@ -1,0 +1,11 @@
+---
+# https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+- name: Get the checksum (TODO)
+  shell: 'curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"'
+
+- name: Download the kubectl binary (TODO)
+  shell: 'curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"'
+
+- name: Install kubectl (TODO)
+  shell: 'sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl'
+...
