@@ -5,12 +5,12 @@
     state: directory
   loop: "{{ create_directories }}"
      
-    # - name: Clone personal public repositories
-    #   git:
-    #     repo: "{{ item.repo }}"
-    #     dest: "{{ item.dest }}"
-    #     version: "{{ item.version }}"
-    #   loop: "{{ personal_repositories_public }}"
+- name: Clone personal public repositories
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    version: "{{ item.version }}"
+  loop: "{{ personal_repositories_public }}"
 
 - name: Create OS specific branch to be used by the OS
   shell:

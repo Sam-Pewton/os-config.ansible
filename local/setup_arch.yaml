@@ -3,8 +3,8 @@
   gather_facts: yes
   roles:
     - common
-    # - pacman
-    # - yay
-    # - iosevka_font
-    # - rust
+    - pacman
+    - yay
+    - iosevka_font
+    - rust
     - zig
