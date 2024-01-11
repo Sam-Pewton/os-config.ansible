@@ -1,0 +1,4 @@
+---
+base_url: "https://ziglang.org/download/index.json"
+home_dest: "bin"
+...

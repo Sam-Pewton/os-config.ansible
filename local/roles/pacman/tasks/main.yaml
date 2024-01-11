@@ -1,8 +1,8 @@
 ---
 - name: Enable multilib repositories
-  replace:
+  lineinfile:
     path: /etc/pacman.conf
-    regexp: "#[multilib]\n#Include = /etc/pacman.d/mirrorlist"
+    insertafter: "EOF"
     replace: "[multilib]\nInclude = /etc/pacman.d/mirrorlist"
   become: true
   become_method: sudo

@@ -12,10 +12,6 @@
     version: "{{ item.version }}"
   loop: "{{ personal_repositories_public }}"
 
-- name: Install other package requirements 
-  shell:
-    cmd: echo "TODO"
-
 - name: Create OS specific branch to be used by the OS
   shell:
     cmd: echo "TODO"

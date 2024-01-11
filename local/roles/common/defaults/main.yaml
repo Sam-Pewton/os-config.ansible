@@ -4,6 +4,7 @@ personal_repositories_public:
   - { repo: https://github.com/Sam-Pewton/strict-package-management.python, dest: ~/repositories/strict-package-management/strict-package-management.python, version: main }
 
 create_directories:
+  - ~/bin
   - ~/repositories 
   - ~/repositories/os-config
   - ~/repositories/strict-package-management
