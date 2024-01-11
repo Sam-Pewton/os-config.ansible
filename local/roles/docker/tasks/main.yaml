@@ -1,0 +1,6 @@
+---
+- name: Start docker service (effective on reboot)
+  service:
+    name: docker
+    enabled: yes
+...

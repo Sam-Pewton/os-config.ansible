@@ -16,6 +16,7 @@ pacman_packages:
   - jq
   - nitrogen
   - libreoffice
+  - minikube
   - neovim
   - nvidia
   - nvidia-utils
