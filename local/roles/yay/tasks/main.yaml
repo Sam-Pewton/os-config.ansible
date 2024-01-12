@@ -22,4 +22,6 @@
   service:
     name: xboxdrv
     enabled: true
+  become: true
+  become_method: sudo
 ...

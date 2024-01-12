@@ -6,5 +6,5 @@
     - pacman
     - yay
     - iosevka_font
-    - rust
+    - rustup
     - zig

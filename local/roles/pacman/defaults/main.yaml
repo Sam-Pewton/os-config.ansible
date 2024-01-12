@@ -13,9 +13,9 @@ pacman_packages:
   - dmenu
     # - gnome
     # - gnome-tweaks
+  - i3-gaps
   - i3-wm
   - i3blocks
-  - i3gaps
   - i3lock
   - i3status
   - jq

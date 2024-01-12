@@ -3,7 +3,7 @@
   lineinfile:
     path: /etc/pacman.conf
     insertafter: "EOF"
-    replace: "[multilib]\nInclude = /etc/pacman.d/mirrorlist"
+    line: "[multilib]\nInclude = /etc/pacman.d/mirrorlist"
   become: true
   become_method: sudo
 
