@@ -22,8 +22,13 @@
   become: true
   become_method: sudo
 
-- name: Start GNOME service (effective on reboot)
+    # - name: Start GNOME service (effective on reboot)
+    #   service:
+    #     name: gdm
+    #     enabled: yes
+
+- name: Start lightdm display manager service (effective on reboot)
   service:
-    name: gdm
+    name: lightdm
     enabled: yes
 ...

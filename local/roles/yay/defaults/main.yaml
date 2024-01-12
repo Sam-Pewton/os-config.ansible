@@ -8,4 +8,5 @@ packages:
   - { name: scangearmp2, state: latest }
   - { name: spotify, state: latest }
   - { name: xboxdrv-stable-git, state: latest }
+  - { name: pa-applet-git, state: latest }
 ...
