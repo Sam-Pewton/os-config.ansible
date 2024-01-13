@@ -1,9 +1,11 @@
 ---
 pacman_packages:
   - alacritty
+  - archlinux-wallpaper
   - arandr
   - arc-gtk-theme
   - base-devel
+  - cheese
   - conky
   - cups
   - discord
@@ -11,36 +13,40 @@ pacman_packages:
   - docker-buildx
   - docker-compose
   - dmenu
-    # - gnome
-    # - gnome-tweaks
+  - gedit
+  - gimp
+  - gnome-system-monitor
   - i3-gaps
   - i3-wm
   - i3blocks
   - i3lock
   - i3status
   - jq
-  - nitrogen
-  - numlockx
-  - papirus-icon-theme
   - libreoffice
   - lightdm
   - lightdm-gtk-greeter
   - lxappearance
   - minikube
   - neovim
+  - nitrogen
   - noto-fonts
+  - numlockx
   - nvidia
   - nvidia-utils
   - obs-studio
   - obsidian
+  - papirus-icon-theme
   - ranger
   - rofi
   - steam
+  - sqlite
+  - sxiv
   - terminator
   - tmux
   - ttf-dejavu
   - ttf-freefont
   - ttf-ubuntu-font-family
+  - wget
   - xorg-apps
   - xorg-server
   - xorg-xinit

@@ -1,0 +1,13 @@
+---
+- name: Make Zsh the default shell
+  shell: chsh -s /bin/zsh
+
+- name: Install Oh My Zsh
+  shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    # - name: Symlink Zsh configuration (yet to be created)
+    #   file:
+    #     src: "{{ config_location }}"
+    #     dest: "{{ symlink_dest }}"
+    #     state: link
+...

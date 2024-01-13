@@ -5,4 +5,12 @@
     enabled: yes
   become: true
   become_method: sudo
+
+- name: Symlink lightdm configuration
+  file:
+    src: "{{ config_location }}"
+    dest: "{{ symlink_dest }}"
+    state: link
+  become: true
+  become_method: sudo
 ...

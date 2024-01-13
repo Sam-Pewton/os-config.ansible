@@ -3,8 +3,8 @@
   blockinfile:
     path: /etc/pacman.conf
     marker: "# {mark} ANSIBLE ENABLED MULTILIB BLOCK"
-    begin_marker: "`START`"
-    end_marker: "`END`"
+    marker_begin: "START"
+    marker_end: "END"
     block: |
       [multilib]
       Include = /etc/pacman.d/mirrorlist

@@ -1,0 +1,7 @@
+---
+- name: Symlink ranger configuration
+  file:
+    src: "{{ config_location }}"
+    dest: "{{ symlink_dest }}"
+    state: link
+...
