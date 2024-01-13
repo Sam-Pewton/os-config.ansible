@@ -5,9 +5,11 @@
     - common
     - pacman
     - yay
-    - iosevka_font
     - alacritty
-    - nvim
     - docker
+    - i3
+    - lightdm
+    - nvim
+    - xboxdrv
     - rustup
     - zig

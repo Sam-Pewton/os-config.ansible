@@ -5,8 +5,9 @@ source:
 packages:
   - brave-bin
   - gitmux
+  - pa-applet-git
   - scangearmp2
   - spotify
+  - ttf-iosevka
   - xboxdrv-stable-git
-  - pa-applet-git
 ...

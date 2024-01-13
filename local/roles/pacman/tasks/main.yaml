@@ -2,7 +2,9 @@
 - name: Enable multilib repositories
   blockinfile:
     path: /etc/pacman.conf
-    marker: "# { mark } ANSIBLE ENABLED MULTILIB BLOCK"
+    marker: "# {mark} ANSIBLE ENABLED MULTILIB BLOCK"
+    begin_marker: "`START`"
+    end_marker: "`END`"
     block: |
       [multilib]
       Include = /etc/pacman.d/mirrorlist
@@ -23,14 +25,4 @@
   loop: "{{ pacman_packages }}"
   become: true
   become_method: sudo
-
-    # - name: Start GNOME service (effective on reboot)
-    #   service:
-    #     name: gdm
-    #     enabled: yes
-
-- name: Start lightdm display manager service (effective on reboot)
-  service:
-    name: lightdm
-    enabled: yes
 ...

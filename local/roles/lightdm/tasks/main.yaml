@@ -1,7 +1,7 @@
 ---
-- name: Start docker service (effective on reboot)
+- name: Enable lightdm display manager service
   service:
-    name: docker
+    name: lightdm
     enabled: yes
   become: true
   become_method: sudo
