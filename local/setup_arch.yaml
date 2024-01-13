@@ -13,6 +13,7 @@
     - nitrogen
     - nvim
     - ranger
+    - rofi
     - xboxdrv
     - rustup
     - zig
