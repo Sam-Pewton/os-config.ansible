@@ -15,7 +15,7 @@
     state: absent
 
 - name: Install yay packages
-  shell: "yay -S {{ item.name }} --noconfirm"
+  shell: "yay -S {{ item }} --noconfirm"
   loop: "{{ packages }}"
 
 - name: Enable xboxdrv.service
