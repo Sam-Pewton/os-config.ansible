@@ -1,9 +1,13 @@
 ---
 pacman_packages:
+  - amd-ucode
   - alacritty
+  - alsa-utils
+  - alsa-plugins
   - archlinux-wallpaper
   - arandr
   - arc-gtk-theme
+  - aws-cli
   - base-devel
   - cheese
   - conky
@@ -16,11 +20,13 @@ pacman_packages:
   - gedit
   - gimp
   - gnome-system-monitor
+  - htop
   - i3-gaps
   - i3-wm
   - i3blocks
   - i3lock
   - i3status
+  - iw
   - jq
   - libreoffice
   - lightdm
@@ -36,7 +42,10 @@ pacman_packages:
   - obs-studio
   - obsidian
   - papirus-icon-theme
+  - pavucontrol
+  - pulseaudio
   - ranger
+  - reflector
   - rofi
   - steam
   - sqlite
@@ -46,7 +55,11 @@ pacman_packages:
   - ttf-dejavu
   - ttf-freefont
   - ttf-ubuntu-font-family
+  - unzip
+  - virt-manager  # todo
+  - vlc
   - wget
+  - wpa_supplicant
   - xorg-apps
   - xorg-server
   - xorg-xinit

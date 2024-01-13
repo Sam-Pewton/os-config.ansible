@@ -1,0 +1,7 @@
+---
+- name: Symlink rofi configuration
+  file:
+    src: "{{ config_location }}"
+    dest: "{{ symlink_dest }}"
+    state: link
+...
