@@ -1,27 +1,29 @@
 ---
+- name: Check if yay is already installed
+  shell: yay --version
+  register: yay_version
+  ignore_errors: yes
+
 - name: Clone yay repository
   git:
     repo: "{{ source.url }}"
     dest: "{{ source.dest }}"
+  when: yay_version.failed
 
 - name: Make the yay package
   command:
     chdir: "{{ source.dest }}"
     cmd: "makepkg -sfi --noconfirm"
+  when: yay_version.failed
 
 - name: Remove the yay directory
   file:
     path: "{{ source.dest }}"
     state: absent
+  when: yay_version.failed
 
 - name: Install yay packages
-  shell: "yay -S {{ item.name }} --noconfirm"
+  shell: "yay -S {{ item }} --noconfirm"
   loop: "{{ packages }}"
-
-- name: Enable xboxdrv.service
-  service:
-    name: xboxdrv
-    enabled: true
-  become: true
-  become_method: sudo
+  ignore_errors: yes
 ...

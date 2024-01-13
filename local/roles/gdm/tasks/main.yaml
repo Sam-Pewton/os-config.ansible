@@ -1,7 +1,7 @@
 ---
-- name: Start docker service (effective on reboot)
+- name: Enable GNOME service (effective on reboot)
   service:
-    name: docker
+    name: gdm
     enabled: yes
   become: true
   become_method: sudo

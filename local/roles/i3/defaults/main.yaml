@@ -1,0 +1,5 @@
+---
+configs:
+  - { location: "~/repositories/os-config/os-config.dotfiles/i3", dest: "~/.config/i3" }
+  - { location: "~/repositories/os-config/os-config.dotfiles/i3status", dest: "~/.config/i3status" }
+...

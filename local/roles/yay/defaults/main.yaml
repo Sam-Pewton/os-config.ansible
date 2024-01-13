@@ -3,10 +3,14 @@ source:
   { url: https://aur.archlinux.org/yay.git, dest: ~/yay, version: main }
 
 packages:
-  - { name: brave-bin, state: latest }
-  - { name: gitmux, state: latest }
-  - { name: scangearmp2, state: latest }
-  - { name: spotify, state: latest }
-  - { name: xboxdrv-stable-git, state: latest }
-  - { name: pa-applet-git, state: latest }
+  - brave-bin
+    # - bumblebee-status
+  - dracula-cursors-git
+  - gitmux
+  - pa-applet-git
+  - postman-bin
+  - scangearmp2
+  - spotify
+  - ttf-iosevka
+  - xboxdrv-stable-git
 ...

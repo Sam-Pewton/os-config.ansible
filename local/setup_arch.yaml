@@ -4,7 +4,15 @@
   roles:
     - common
     - pacman
+    - zsh
     - yay
-    - iosevka_font
+    - alacritty
+    - docker
+    - i3
+    - lightdm
+    - nitrogen
+    - nvim
+    - ranger
+    - xboxdrv
     - rustup
     - zig

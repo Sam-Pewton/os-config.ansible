@@ -1,0 +1,8 @@
+---
+- name: Symlink i3 config
+  file:
+    src: "{{ item.location }}"
+    dest: "{{ item.dest }}"
+    state: link
+  loop: "{{ configs }}"
+...

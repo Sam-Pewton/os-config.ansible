@@ -5,6 +5,7 @@ personal_repositories_public:
 
 create_directories:
   - ~/bin
+  - ~/Downloads
   - ~/repositories 
   - ~/repositories/os-config
   - ~/repositories/strict-package-management
