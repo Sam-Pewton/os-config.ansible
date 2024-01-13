@@ -6,5 +6,8 @@
     - pacman
     - yay
     - iosevka_font
+    - alacritty
+    - nvim
+    - docker
     - rustup
     - zig
