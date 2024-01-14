@@ -21,11 +21,11 @@ pacman_packages:
   - gimp
   - gnome-system-monitor
   - htop
-  - i3-gaps
-  - i3-wm
-  - i3blocks
-  - i3lock
-  - i3status
+    # - i3-gaps
+    # - i3-wm
+    # - i3blocks
+    # - i3lock
+    # - i3status
   - iw
   - jq
   - libreoffice
@@ -43,7 +43,9 @@ pacman_packages:
   - obsidian
   - papirus-icon-theme
   - pavucontrol
+  - picom
   - pulseaudio
+  - qtile
   - ranger
   - reflector
   - rofi

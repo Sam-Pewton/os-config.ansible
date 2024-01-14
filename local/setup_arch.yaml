@@ -8,7 +8,7 @@
     - yay
     - alacritty
     - docker
-    - i3
+    - qtile
     - lightdm
     - nitrogen
     - nvim
