@@ -17,6 +17,7 @@ pacman_packages:
   - docker-buildx
   - docker-compose
   - dmenu
+  - emacs
   - gedit
   - gimp
   - gnome-system-monitor
