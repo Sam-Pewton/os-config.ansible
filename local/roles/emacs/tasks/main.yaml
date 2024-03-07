@@ -1,2 +1,26 @@
 ---
+- name: Create .emacs.d if not exists
+  file:
+    path: "~/.emacs.d"
+    state: directory
+
+- name: Create themes dir if not exists
+  file:
+    path: "~/.emacs.d/themes"
+    state: directory
+    
+- name: Hard link init.el
+  file:
+    src: "~/repositories/os-config/os-config.dotfiles/emacs/init.el"
+    dest: "~/.emacs.d/init.el"
+    state: link
+
+- name: Hard link themes
+  file:
+    src: "~/repositories/os-config/os-config.dotfiles/emacs/themes/peacock-theme.el"
+    dest: "~/.emacs.d/themes/peacock-theme.el"
+    state: link
+
+- name: Ensure python-language-server[all] is installed
+  shell: pip install python-language-server[all]
 ...
