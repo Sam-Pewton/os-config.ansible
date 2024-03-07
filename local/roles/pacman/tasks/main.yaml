@@ -22,6 +22,7 @@
   pacman:
     name: "{{ item }}"
     state: latest
+    extra_args: --overwrite "*"
   loop: "{{ pacman_packages }}"
   become: true
   become_method: sudo
