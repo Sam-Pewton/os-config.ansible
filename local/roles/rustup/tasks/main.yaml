@@ -2,7 +2,7 @@
 - name: Check if cargo is installed
   shell: cargo --version
   register: cargo_version
-  ignore_errors: yes
+  ignore_errors: true
 
 - name: Download the rustup installer
   get_url:
@@ -14,5 +14,11 @@
 
 - name: Run the rustup installer
   shell: ~/Downloads/sh.rustup.rs -y
-  when: cargo_version.failed 
+  when: cargo_version.failed
+
+- name: Add the standard library sources (required for rust-analyzer)
+  shell: rustup component add rust-src
+
+- name: Install rust-analyzer
+  shell: rustup component add rust-analyzer
 ...
