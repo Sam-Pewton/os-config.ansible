@@ -6,6 +6,13 @@
   become: true
   become_method: sudo
 
+- name: Create lightdm config directory
+  file:
+    path: "/etc/lightdm"
+    type: directory
+  become: true
+  become_method: sudo
+
 - name: Symlink lightdm configuration
   file:
     src: "{{ config_location }}"
