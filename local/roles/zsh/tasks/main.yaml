@@ -1,6 +1,8 @@
 ---
 - name: Make Zsh the default shell
   shell: chsh -s /bin/zsh
+  become: true
+  become_method: sudo
 
 - name: Install Oh My Zsh
   shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
