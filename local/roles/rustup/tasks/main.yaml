@@ -16,13 +16,13 @@
   shell: ~/Downloads/sh.rustup.rs -y
   when: cargo_version.failed
 
-- name: Source cargo
-  shell: source "$HOME/.cargo/env"
-  when: cargo_version.failed
+# - name: Source cargo
+#  shell: source "$HOME/.cargo/env"
+#  when: cargo_version.failed
 
 - name: Add the standard library sources (required for rust-analyzer)
-  shell: rustup component add rust-src
+  shell: "source $HOME/.cargo/env && rustup component add rust-src"
 
 - name: Install rust-analyzer
-  shell: rustup component add rust-analyzer
+  shell: "source $HOME/.cargo/env && rustup component add rust-analyzer"
 ...

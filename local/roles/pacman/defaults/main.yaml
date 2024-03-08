@@ -47,7 +47,8 @@ pacman_packages:
   - papirus-icon-theme
   - pavucontrol
   - picom
-  - pulseaudio
+  # - pulseaudio
+  - python-language-server
   - python-pip
   - qtile
   - ranger

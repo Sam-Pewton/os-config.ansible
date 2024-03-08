@@ -18,6 +18,7 @@
     src: "{{ config_location }}"
     dest: "{{ symlink_dest }}"
     state: link
+    force: true
   become: true
   become_method: sudo
 ...
