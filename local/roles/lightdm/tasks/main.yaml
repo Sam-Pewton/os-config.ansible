@@ -9,7 +9,7 @@
 - name: Create lightdm config directory
   file:
     path: "/etc/lightdm"
-    type: directory
+    state: directory
   become: true
   become_method: sudo
 
