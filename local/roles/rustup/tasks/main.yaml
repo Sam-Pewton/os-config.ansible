@@ -10,10 +10,14 @@
     dest: ~/Downloads/sh.rustup.rs
     mode: '0755'
     force: 'yes'
-  when: cargo_version.failed 
+  when: cargo_version.failed
 
 - name: Run the rustup installer
   shell: ~/Downloads/sh.rustup.rs -y
+  when: cargo_version.failed
+
+- name: Source cargo
+  shell: source "$HOME/.cargo/env"
   when: cargo_version.failed
 
 - name: Add the standard library sources (required for rust-analyzer)
