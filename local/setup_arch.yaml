@@ -10,11 +10,12 @@
     - docker
     - qtile
     - lightdm
-    - nitrogen
+#    - nitrogen
     - nvim
     - ranger
     - rofi
     - xboxdrv
+    - miniforge
     - rustup
     - zig
     - emacs
