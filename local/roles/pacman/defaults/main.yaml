@@ -48,7 +48,7 @@ pacman_packages:
   - pavucontrol
   - picom
   # - pulseaudio
-  - python-language-server
+  - python-lsp-server
   - python-pip
   - qtile
   - ranger
