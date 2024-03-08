@@ -1,2 +1,31 @@
 ---
+- name: Check if miniforge is installed
+  shell: conda --version
+  register: conda_version
+  ignore_errors: true
+
+- name: Get OS type
+  shell: uname
+  register: os_type
+
+- name: Get architecture type
+  shell: uname -m
+  register: architecture_type
+
+- name: Download the miniforge installer
+  get_url:
+    url: "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-{{ os_type }}-{{ architecture_type }}.sh"
+    dest: "~/Downloads/Miniforge3-{{ os_type }}-{{ architecture_type }}.sh"
+    mode: "0755"
+    force: "yes"
+  when: conda_version.failed
+
+- name: Run the miniforge installer
+  shell: "bash ~/Downloads/Miniforge3-{{ os-type }}-{{ architecture_type }}.sh -b"
+
+- name: Source conda for current shell
+  shell: source "$HOME/conda/etc/profile.d/conda.sh"
+
+- name: Activate the base environment
+  shell: conda activate
 ...
