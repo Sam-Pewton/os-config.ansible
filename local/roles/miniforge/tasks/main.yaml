@@ -14,17 +14,20 @@
 
 - name: Download the miniforge installer
   get_url:
-    url: "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-{{ os_type }}-{{ architecture_type }}.sh"
-    dest: "~/Downloads/Miniforge3-{{ os_type }}-{{ architecture_type }}.sh"
+    url: "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-{{ os_type.stdout }}-{{ architecture_type.stdout }}.sh"
+    dest: "~/Downloads/Miniforge3.sh"
     mode: "0755"
     force: "yes"
   when: conda_version.failed
 
 - name: Run the miniforge installer
-  shell: "bash ~/Downloads/Miniforge3-{{ os-type }}-{{ architecture_type }}.sh -b"
+  shell: "bash ~/Downloads/Miniforge3.sh -b -p $HOME/conda"
 
 - name: Source conda for current shell
   shell: source "$HOME/conda/etc/profile.d/conda.sh"
+
+- name: Source mamba for current shell
+  shell: source "$HOME/conda/etc/profile.d/mamba.sh"
 
 - name: Activate the base environment
   shell: conda activate

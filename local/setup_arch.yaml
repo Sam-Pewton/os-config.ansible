@@ -10,7 +10,6 @@
     - docker
     - qtile
     - lightdm
-#    - nitrogen
     - nvim
     - ranger
     - rofi
@@ -19,3 +18,4 @@
     - rustup
     - zig
     - emacs
+    - nitrogen
