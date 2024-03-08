@@ -2,7 +2,7 @@
 - name: Check if yay is already installed
   shell: yay --version
   register: yay_version
-  ignore_errors: yes
+  ignore_errors: true
 
 - name: Clone yay repository
   git:
@@ -25,5 +25,5 @@
 - name: Install yay packages
   shell: "yay -S {{ item }} --noconfirm"
   loop: "{{ packages }}"
-  ignore_errors: yes
+  ignore_errors: true
 ...
