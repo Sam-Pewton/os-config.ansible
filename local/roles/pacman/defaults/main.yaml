@@ -20,6 +20,7 @@ pacman_packages:
   - emacs
   - gedit
   - gimp
+  - gnome
   - gnome-system-monitor
   - htop
     # - i3-gaps
@@ -35,6 +36,7 @@ pacman_packages:
   - lxappearance
   - minikube
   - neovim
+  - networkmanager
   - nitrogen
   - noto-fonts
   - numlockx
@@ -64,6 +66,7 @@ pacman_packages:
   - vlc
   - wget
   - wpa_supplicant
+  - xorg
   - xorg-apps
   - xorg-server
   - xorg-xinit

@@ -5,4 +5,11 @@
     enabled: yes
   become: true
   become_method: sudo
+
+- name: Enable NetworkManager service
+  service:
+    name: NetworkManager
+    enabled: yes
+  become: true
+  become_method: sudo
 ...

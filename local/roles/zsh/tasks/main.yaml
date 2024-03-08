@@ -6,6 +6,7 @@
 
 - name: Install Oh My Zsh
   shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ignore_errors: true
 
     # - name: Symlink Zsh configuration (yet to be created)
     #   file:
