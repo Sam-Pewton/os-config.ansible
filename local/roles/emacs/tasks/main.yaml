@@ -21,6 +21,6 @@
     dest: "~/.emacs.d/themes/peacock-theme.el"
     state: link
 
-- name: Ensure python-language-server[all] is installed
-  shell: pip install python-language-server[all]
+# - name: Ensure python-language-server[all] is installed
+#   shell: pip install python-language-server[all]
 ...

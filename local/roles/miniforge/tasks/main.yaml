@@ -22,13 +22,14 @@
 
 - name: Run the miniforge installer
   shell: "bash ~/Downloads/Miniforge3.sh -b -p $HOME/.conda"
+  when: conda_version.failed
 
 - name: Source conda for current shell
-  shell: "source $HOME/.conda/etc/profile.d/conda.sh"
+  shell: "source $HOME/.conda/etc/profile.d/conda.sh && conda activate"
 
-- name: Source mamba for current shell
-  shell: "source $HOME/.conda/etc/profile.d/mamba.sh"
+# - name: Source mamba for current shell
+#  shell: "source $HOME/.conda/etc/profile.d/mamba.sh && mamba activate"
 
-- name: Activate the base environment
-  shell: "conda activate"
+# - name: Activate the base environment
+#  shell: "conda activate"
 ...
