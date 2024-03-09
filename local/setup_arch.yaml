@@ -10,6 +10,7 @@
     - docker
     - qtile
     # - lightdm
+    - gdm
     - nvim
     - ranger
     - rofi
