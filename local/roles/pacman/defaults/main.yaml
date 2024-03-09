@@ -9,10 +9,12 @@ pacman_packages:
   - arc-gtk-theme
   - aws-cli
   - base-devel
+  - bridge-utils
   - cheese
   - conky
   - cups
   - discord
+  - dnsmasq
   - docker
   - docker-buildx
   - docker-compose
@@ -31,6 +33,7 @@ pacman_packages:
   - iw
   - jq
   - libreoffice
+  - libguestfs
   - lightdm
   - lightdm-gtk-greeter
   - lxappearance
@@ -44,12 +47,14 @@ pacman_packages:
   - nvidia-utils
   - obs-studio
   - obsidian
+  - openbsd-netcat
   - papirus-icon-theme
   - pavucontrol
   - picom
   # - pulseaudio
   - python-lsp-server
   - python-pip
+  - qemu-full
   - qtile
   - ranger
   - reflector
@@ -63,7 +68,9 @@ pacman_packages:
   - ttf-freefont
   - ttf-ubuntu-font-family
   - unzip
-  - virt-manager  # todo
+  - vde2
+  - virt-manager
+  - virt-viewer
   - vlc
   - wget
   - wpa_supplicant
