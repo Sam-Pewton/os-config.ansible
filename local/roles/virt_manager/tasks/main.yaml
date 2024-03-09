@@ -1,0 +1,20 @@
+---
+- name: Enable virtqemud
+  service:
+    name: virtqemud
+    enabled: true
+  become: true
+  become_method: sudo
+
+- name: Get current user
+  shell: whoami
+  register: current_user
+
+- name: Add current user to group
+  user:
+    name: current_user.stdout
+    groups: libvirt
+    append: yes
+  become: true
+  become_method: sudo
+...
