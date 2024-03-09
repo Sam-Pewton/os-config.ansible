@@ -1,6 +1,6 @@
 ---
 - name: Check if miniforge is installed
-  shell: conda --version
+  shell: "source $HOME/.conda/etc/profile.d/conda.sh && conda --version"
   register: conda_version
   ignore_errors: true
 
