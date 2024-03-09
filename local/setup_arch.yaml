@@ -18,4 +18,5 @@
     - rustup
     - zig
     - emacs
+    - virt_manager
     # - nitrogen
