@@ -9,7 +9,7 @@
     - alacritty
     - docker
     - qtile
-    - lightdm
+    # - lightdm
     - nvim
     - ranger
     - rofi
@@ -18,4 +18,4 @@
     - rustup
     - zig
     - emacs
-    - nitrogen
+    # - nitrogen
