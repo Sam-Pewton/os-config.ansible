@@ -1,7 +1,4 @@
 ---
-- name: Reboot
-  reboot:
-
 - name: Set wallpaper (for arch)
   shell: "nitrogen /usr/share/backgrounds/archlinux/wave.png"
 ...
