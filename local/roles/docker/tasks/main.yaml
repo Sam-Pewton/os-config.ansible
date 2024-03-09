@@ -5,4 +5,16 @@
     enabled: yes
   become: true
   become_method: sudo
+
+- name: Get current user
+  shell: whoami
+  register: current_user
+
+- name: Add current user to docker group
+  user:
+    name: current_user.stdout
+    groups: docker
+    append: yes
+  become: true
+  become_method: sudo
 ...
