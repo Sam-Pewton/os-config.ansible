@@ -41,7 +41,6 @@
 
 - name: Start default network (autostart)
   virt_net:
-    command: start
     autostart: true
     name: default
   become: true
