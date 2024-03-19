@@ -3,6 +3,7 @@
   service:
     name: virtqemud
     enabled: true
+    state: started
   become: true
   become_method: sudo
 
@@ -34,6 +35,7 @@
   service:
     name: libvirtd
     enabled: true
+    state: started
   become: true
   become_method: sudo
 
