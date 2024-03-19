@@ -29,4 +29,19 @@
       unix_sock_rw_perms = "0770"
   become: true
   become_method: sudo
+
+- name: Enable libvirtd
+  service:
+    name: libvirtd
+    enabled: true
+  become: true
+  become_method: sudo
+
+- name: Start default network (autostart)
+  virt_net:
+    command: start
+    autostart: true
+    name: default
+  become: true
+  become_method: sudo
 ...
