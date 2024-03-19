@@ -52,6 +52,7 @@ pacman_packages:
   - pavucontrol
   - picom
   # - pulseaudio
+  - python-lxml
   - python-lsp-server
   - python-pip
   - qemu-full
