@@ -13,6 +13,7 @@ pacman_packages:
   - cheese
   - conky
   - cups
+  - cuda
   - discord
   - dnsmasq
   - docker
