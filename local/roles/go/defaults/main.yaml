@@ -1,4 +1,7 @@
 ---
 base_url: "https://go.dev/dl/"
 home_dest: "bin"
+required_version: "linux-amd64"
+# Visit https://go.dev/dl/ for more info on arch versions
+# Include here only the part between the version number and the file extension
 ...

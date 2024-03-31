@@ -6,11 +6,11 @@
     return_content: true
   register: go_versions
 
-- name: Extract linux amd64 version
+- name: Extract required architecture version
   set_fact:
     use_version: "{{ item }}"
   loop: "{{ go_versions.json[0].files }}"
-  when: "'linux-amd64' in item.filename"
+  when: "required_version in item.filename"
 
 - name: Get user home path
   shell: "echo $HOME"
