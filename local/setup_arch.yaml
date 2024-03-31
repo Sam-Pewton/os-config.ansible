@@ -18,6 +18,7 @@
     - miniforge
     - rustup
     - zig
+    - go
     - emacs
     - virt_manager
     # - nitrogen
