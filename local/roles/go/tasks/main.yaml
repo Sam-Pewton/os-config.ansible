@@ -1,0 +1,48 @@
+---
+- name: Get golang version manifest
+  uri:
+    url: "{{ base_url }}?mode=json"
+    method: GET
+    return_content: true
+  register: go_versions
+
+- name: Extract linux amd64 version
+  set_fact:
+    use_version: "{{ item }}"
+  loop: "{{ go_versions.json[0].files }}"
+  when: "'linux-amd64' in item.filename"
+
+- name: Get user home path
+  shell: "echo $HOME"
+  register: user_home
+
+- name: Download master version
+  get_url: 
+    url: "{{ base_url }}{{ use_version.filename }}"
+    dest: "{{ user_home.stdout }}/{{ home_dest }}"
+    checksum: "sha256:{{ use_version.sha256 }}"
+
+- name: Remove any previous installations (if exists)
+  file:
+    path: "/usr/local/go"
+    state: absent
+  become: true
+  become_method: sudo
+
+- name: Untar latest Go version
+  unarchive:
+    src: "{{ user_home.stdout }}/{{ home_dest }}/{{ use_version.filename }}"
+    dest: "/usr/local"
+  become: true
+  become_method: sudo
+
+- name: Add Go PATH (might come in via .conf later)
+  shell: echo todo
+
+- name: Ensure Go installed correctly
+  shell: export PATH=$PATH:/usr/local/go/bin && go version
+
+- name: Delete the tarball
+  file:
+    path: "{{ user_home.stdout }}/{{ home_dest }}/{{use_version.filename }}"
+...
