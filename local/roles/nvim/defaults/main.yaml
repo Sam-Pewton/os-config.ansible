@@ -7,4 +7,5 @@ default_install_locations_root:
   - "/usr/local/lib/nvim"
 default_install_locations_home:
   - "~/.local/share/nvim"
+  - "~/.config/nvim"
 ...
