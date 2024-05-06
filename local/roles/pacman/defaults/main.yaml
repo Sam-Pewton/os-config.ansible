@@ -11,9 +11,12 @@ pacman_packages:
   - base-devel
   - bridge-utils
   - cheese
+  - clang
+  - cmake
   - conky
-  - cups
   - cuda
+  - cups
+  - curl
   - discord
   - dnsmasq
   - docker
@@ -21,6 +24,7 @@ pacman_packages:
   - docker-compose
   - dmenu
   - emacs
+  - gcc
   - gedit
   - gimp
   - gnome
@@ -39,8 +43,9 @@ pacman_packages:
   - lightdm-gtk-greeter
   - lxappearance
   - minikube
-  - neovim
+  # - neovim
   - networkmanager
+  - ninja
   - nitrogen
   - noto-fonts
   - numlockx

@@ -9,4 +9,5 @@ create_directories:
   - ~/repositories 
   - ~/repositories/os-config
   - ~/repositories/strict-package-management
+  - ~/repositories/external
 ...

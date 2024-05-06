@@ -19,6 +19,6 @@
     - rustup
     - zig
     - go
-    - emacs
+    - nvim
     - virt_manager
     # - nitrogen
