@@ -1,4 +1,46 @@
 ---
+- name: Get user home path
+  shell: "echo $HOME"
+  register: user_home
+
+- name: Uninstall current neovim version - root (if any)
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop: "{{ default_install_locations_root }}"
+  become: true
+  become_method: sudo
+
+- name: Uninstall current neovim version - home (if any)
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop: "{{ default_install_locations_home }}"
+
+- name: Delete the repository (if exists)
+  file:
+    path: "{{ user_home.stdout }}/{{ git_clone_location }}"
+    state: absent
+  become: true
+  become_method: sudo
+
+- name: Clone the neovim repository
+  git:
+    repo: "https://github.com/neovim/neovim"
+    dest: "~/{{ git_clone_location }}"
+    version: "stable"
+    force: true
+
+
+- name: Build and install the package
+  make:
+    chdir: "{{ user_home.stdout }}/{{ git_clone_location }}"
+    params:
+      CMAKE_BUILD_TYPE: RelWithDebInfo
+    target: install
+  become: true
+  become_method: sudo
+
 - name: Symlink neovim configuration
   file:
     src: "{{ config_location }}"
